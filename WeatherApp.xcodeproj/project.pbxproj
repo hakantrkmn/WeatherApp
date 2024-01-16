@@ -9,21 +9,30 @@
 /* Begin PBXBuildFile section */
 		494287352B568FC4004243D1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494287342B568FC4004243D1 /* AppDelegate.swift */; };
 		494287372B568FC4004243D1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494287362B568FC4004243D1 /* SceneDelegate.swift */; };
-		494287392B568FC4004243D1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494287382B568FC4004243D1 /* ViewController.swift */; };
-		4942873C2B568FC4004243D1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4942873A2B568FC4004243D1 /* Main.storyboard */; };
+		494287392B568FC4004243D1 /* WeatherInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494287382B568FC4004243D1 /* WeatherInfoVC.swift */; };
 		4942873E2B568FC5004243D1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4942873D2B568FC5004243D1 /* Assets.xcassets */; };
 		494287412B568FC5004243D1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4942873F2B568FC5004243D1 /* LaunchScreen.storyboard */; };
+		494287492B5690EF004243D1 /* WATabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494287482B5690EF004243D1 /* WATabBarController.swift */; };
+		4942874B2B569191004243D1 /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4942874A2B569191004243D1 /* SearchVC.swift */; };
+		494287512B569422004243D1 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 494287502B569422004243D1 /* SnapKit */; };
+		494287532B569422004243D1 /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 494287522B569422004243D1 /* SnapKit-Dynamic */; };
+		494287582B5697F4004243D1 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494287572B5697F4004243D1 /* NetworkManager.swift */; };
+		4942875B2B569819004243D1 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 4942875A2B569819004243D1 /* Alamofire */; };
+		494287602B569846004243D1 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4942875F2B569846004243D1 /* Weather.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		494287312B568FC4004243D1 /* WeatherApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		494287342B568FC4004243D1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		494287362B568FC4004243D1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		494287382B568FC4004243D1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		4942873B2B568FC4004243D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		494287382B568FC4004243D1 /* WeatherInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherInfoVC.swift; sourceTree = "<group>"; };
 		4942873D2B568FC5004243D1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		494287402B568FC5004243D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		494287422B568FC5004243D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		494287482B5690EF004243D1 /* WATabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WATabBarController.swift; sourceTree = "<group>"; };
+		4942874A2B569191004243D1 /* SearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVC.swift; sourceTree = "<group>"; };
+		494287572B5697F4004243D1 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		4942875F2B569846004243D1 /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +40,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4942875B2B569819004243D1 /* Alamofire in Frameworks */,
+				494287512B569422004243D1 /* SnapKit in Frameworks */,
+				494287532B569422004243D1 /* SnapKit-Dynamic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,15 +68,74 @@
 		494287332B568FC4004243D1 /* WeatherApp */ = {
 			isa = PBXGroup;
 			children = (
-				494287342B568FC4004243D1 /* AppDelegate.swift */,
-				494287362B568FC4004243D1 /* SceneDelegate.swift */,
-				494287382B568FC4004243D1 /* ViewController.swift */,
-				4942873A2B568FC4004243D1 /* Main.storyboard */,
+				4942875E2B569838004243D1 /* Model */,
+				494287562B5697E3004243D1 /* Managers */,
+				4942874E2B5691C2004243D1 /* CustomViews */,
+				4942874D2B56919F004243D1 /* Support */,
+				4942874C2B569195004243D1 /* Screens */,
 				4942873D2B568FC5004243D1 /* Assets.xcassets */,
-				4942873F2B568FC5004243D1 /* LaunchScreen.storyboard */,
 				494287422B568FC5004243D1 /* Info.plist */,
 			);
 			path = WeatherApp;
+			sourceTree = "<group>";
+		};
+		4942874C2B569195004243D1 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				494287382B568FC4004243D1 /* WeatherInfoVC.swift */,
+				4942874A2B569191004243D1 /* SearchVC.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		4942874D2B56919F004243D1 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				494287342B568FC4004243D1 /* AppDelegate.swift */,
+				494287362B568FC4004243D1 /* SceneDelegate.swift */,
+				4942873F2B568FC5004243D1 /* LaunchScreen.storyboard */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		4942874E2B5691C2004243D1 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				494287552B5696C9004243D1 /* Views */,
+				494287542B5696C1004243D1 /* TabBar */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		494287542B5696C1004243D1 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				494287482B5690EF004243D1 /* WATabBarController.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		494287552B5696C9004243D1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		494287562B5697E3004243D1 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				494287572B5697F4004243D1 /* NetworkManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		4942875E2B569838004243D1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4942875F2B569846004243D1 /* Weather.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +154,11 @@
 			dependencies = (
 			);
 			name = WeatherApp;
+			packageProductDependencies = (
+				494287502B569422004243D1 /* SnapKit */,
+				494287522B569422004243D1 /* SnapKit-Dynamic */,
+				4942875A2B569819004243D1 /* Alamofire */,
+			);
 			productName = WeatherApp;
 			productReference = 494287312B568FC4004243D1 /* WeatherApp.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +187,10 @@
 				Base,
 			);
 			mainGroup = 494287282B568FC4004243D1;
+			packageReferences = (
+				4942874F2B569422004243D1 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				494287592B569819004243D1 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = 494287322B568FC4004243D1 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -127,7 +207,6 @@
 			files = (
 				494287412B568FC5004243D1 /* LaunchScreen.storyboard in Resources */,
 				4942873E2B568FC5004243D1 /* Assets.xcassets in Resources */,
-				4942873C2B568FC4004243D1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,23 +217,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				494287392B568FC4004243D1 /* ViewController.swift in Sources */,
+				494287582B5697F4004243D1 /* NetworkManager.swift in Sources */,
+				494287392B568FC4004243D1 /* WeatherInfoVC.swift in Sources */,
+				4942874B2B569191004243D1 /* SearchVC.swift in Sources */,
 				494287352B568FC4004243D1 /* AppDelegate.swift in Sources */,
 				494287372B568FC4004243D1 /* SceneDelegate.swift in Sources */,
+				494287492B5690EF004243D1 /* WATabBarController.swift in Sources */,
+				494287602B569846004243D1 /* Weather.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		4942873A2B568FC4004243D1 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				4942873B2B568FC4004243D1 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		4942873F2B568FC5004243D1 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -297,7 +372,6 @@
 				INFOPLIST_FILE = WeatherApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -325,7 +399,6 @@
 				INFOPLIST_FILE = WeatherApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -363,6 +436,43 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		4942874F2B569422004243D1 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.7.0;
+			};
+		};
+		494287592B569819004243D1 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.8.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		494287502B569422004243D1 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4942874F2B569422004243D1 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		494287522B569422004243D1 /* SnapKit-Dynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4942874F2B569422004243D1 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = "SnapKit-Dynamic";
+		};
+		4942875A2B569819004243D1 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 494287592B569819004243D1 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 494287292B568FC4004243D1 /* Project object */;
 }
