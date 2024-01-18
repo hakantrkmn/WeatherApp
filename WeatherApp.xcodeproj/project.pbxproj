@@ -21,6 +21,14 @@
 		494287602B569846004243D1 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4942875F2B569846004243D1 /* Weather.swift */; };
 		494287742B56ABC3004243D1 /* WASummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494287732B56ABC3004243D1 /* WASummaryView.swift */; };
 		49EC08AB2B56C93500926BE3 /* WASummaryLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49EC08AA2B56C93500926BE3 /* WASummaryLabel.swift */; };
+		49EC08AE2B56CFED00926BE3 /* View+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49EC08AD2B56CFED00926BE3 /* View+Ext.swift */; };
+		49EC08B22B59340000926BE3 /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49EC08B12B59340000926BE3 /* String+Ext.swift */; };
+		49EC08B42B59379600926BE3 /* WAHoursView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49EC08B32B59379600926BE3 /* WAHoursView.swift */; };
+		49EC08B72B59384A00926BE3 /* WAHourCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49EC08B62B59384900926BE3 /* WAHourCVCell.swift */; };
+		49EC08BA2B593E5300926BE3 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 49EC08B92B593E5300926BE3 /* SDWebImage */; };
+		49EC08BC2B593E5300926BE3 /* SDWebImageMapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 49EC08BB2B593E5300926BE3 /* SDWebImageMapKit */; };
+		49EC08BE2B594CE100926BE3 /* WADaysView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49EC08BD2B594CE100926BE3 /* WADaysView.swift */; };
+		49EC08C02B594DE900926BE3 /* WADayTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49EC08BF2B594DE900926BE3 /* WADayTVCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +45,12 @@
 		4942875F2B569846004243D1 /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 		494287732B56ABC3004243D1 /* WASummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WASummaryView.swift; sourceTree = "<group>"; };
 		49EC08AA2B56C93500926BE3 /* WASummaryLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WASummaryLabel.swift; sourceTree = "<group>"; };
+		49EC08AD2B56CFED00926BE3 /* View+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Ext.swift"; sourceTree = "<group>"; };
+		49EC08B12B59340000926BE3 /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
+		49EC08B32B59379600926BE3 /* WAHoursView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WAHoursView.swift; sourceTree = "<group>"; };
+		49EC08B62B59384900926BE3 /* WAHourCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WAHourCVCell.swift; sourceTree = "<group>"; };
+		49EC08BD2B594CE100926BE3 /* WADaysView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WADaysView.swift; sourceTree = "<group>"; };
+		49EC08BF2B594DE900926BE3 /* WADayTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WADayTVCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,7 +59,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				4942875B2B569819004243D1 /* Alamofire in Frameworks */,
+				49EC08BC2B593E5300926BE3 /* SDWebImageMapKit in Frameworks */,
 				494287512B569422004243D1 /* SnapKit in Frameworks */,
+				49EC08BA2B593E5300926BE3 /* SDWebImage in Frameworks */,
 				494287532B569422004243D1 /* SnapKit-Dynamic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -72,6 +88,7 @@
 		494287332B568FC4004243D1 /* WeatherApp */ = {
 			isa = PBXGroup;
 			children = (
+				49EC08AC2B56CFDF00926BE3 /* Extensions */,
 				4942875E2B569838004243D1 /* Model */,
 				494287562B5697E3004243D1 /* Managers */,
 				4942874E2B5691C2004243D1 /* CustomViews */,
@@ -105,6 +122,7 @@
 		4942874E2B5691C2004243D1 /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
+				49EC08B52B59381B00926BE3 /* Cells */,
 				49EC08A92B56C78400926BE3 /* Labels */,
 				494287552B5696C9004243D1 /* Views */,
 				494287542B5696C1004243D1 /* TabBar */,
@@ -124,6 +142,8 @@
 			isa = PBXGroup;
 			children = (
 				494287732B56ABC3004243D1 /* WASummaryView.swift */,
+				49EC08B32B59379600926BE3 /* WAHoursView.swift */,
+				49EC08BD2B594CE100926BE3 /* WADaysView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -152,6 +172,24 @@
 			path = Labels;
 			sourceTree = "<group>";
 		};
+		49EC08AC2B56CFDF00926BE3 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				49EC08AD2B56CFED00926BE3 /* View+Ext.swift */,
+				49EC08B12B59340000926BE3 /* String+Ext.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		49EC08B52B59381B00926BE3 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				49EC08B62B59384900926BE3 /* WAHourCVCell.swift */,
+				49EC08BF2B594DE900926BE3 /* WADayTVCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -172,6 +210,8 @@
 				494287502B569422004243D1 /* SnapKit */,
 				494287522B569422004243D1 /* SnapKit-Dynamic */,
 				4942875A2B569819004243D1 /* Alamofire */,
+				49EC08B92B593E5300926BE3 /* SDWebImage */,
+				49EC08BB2B593E5300926BE3 /* SDWebImageMapKit */,
 			);
 			productName = WeatherApp;
 			productReference = 494287312B568FC4004243D1 /* WeatherApp.app */;
@@ -204,6 +244,7 @@
 			packageReferences = (
 				4942874F2B569422004243D1 /* XCRemoteSwiftPackageReference "SnapKit" */,
 				494287592B569819004243D1 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				49EC08B82B593E5300926BE3 /* XCRemoteSwiftPackageReference "SDWebImage" */,
 			);
 			productRefGroup = 494287322B568FC4004243D1 /* Products */;
 			projectDirPath = "";
@@ -233,13 +274,19 @@
 			files = (
 				494287582B5697F4004243D1 /* NetworkManager.swift in Sources */,
 				494287392B568FC4004243D1 /* WeatherInfoVC.swift in Sources */,
+				49EC08AE2B56CFED00926BE3 /* View+Ext.swift in Sources */,
+				49EC08C02B594DE900926BE3 /* WADayTVCell.swift in Sources */,
 				4942874B2B569191004243D1 /* SearchVC.swift in Sources */,
+				49EC08B42B59379600926BE3 /* WAHoursView.swift in Sources */,
 				494287352B568FC4004243D1 /* AppDelegate.swift in Sources */,
 				494287372B568FC4004243D1 /* SceneDelegate.swift in Sources */,
+				49EC08BE2B594CE100926BE3 /* WADaysView.swift in Sources */,
+				49EC08B72B59384A00926BE3 /* WAHourCVCell.swift in Sources */,
 				494287492B5690EF004243D1 /* WATabBarController.swift in Sources */,
 				494287602B569846004243D1 /* Weather.swift in Sources */,
 				494287742B56ABC3004243D1 /* WASummaryView.swift in Sources */,
 				49EC08AB2B56C93500926BE3 /* WASummaryLabel.swift in Sources */,
+				49EC08B22B59340000926BE3 /* String+Ext.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -470,6 +517,14 @@
 				minimumVersion = 5.8.1;
 			};
 		};
+		49EC08B82B593E5300926BE3 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.18.10;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -487,6 +542,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 494287592B569819004243D1 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
+		};
+		49EC08B92B593E5300926BE3 /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 49EC08B82B593E5300926BE3 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+		49EC08BB2B593E5300926BE3 /* SDWebImageMapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 49EC08B82B593E5300926BE3 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImageMapKit;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

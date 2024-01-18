@@ -39,11 +39,9 @@ class WASummaryView: UIView {
     
     func configure()
     {
-        addSubview(cityName)
-        addSubview(degree)
-        addSubview(condition)
-        addSubview(minDegree)
-        addSubview(maxDegree)
+        backgroundColor = .systemBlue
+        addSubViews(cityName,degree,condition,minDegree,maxDegree)
+        
         
         
         cityName.snp.makeConstraints { make in

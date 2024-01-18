@@ -14,7 +14,7 @@ class WATabBarController: UITabBarController {
         super.viewDidLoad()
         UITabBar.appearance().backgroundColor = .systemBackground
         UITabBar.appearance().tintColor = .systemGreen
-        viewControllers = [createSearchNC() , createWeatherInfoVC()]
+        viewControllers = [createWeatherInfoVC() , createSearchNC()]
     }
     
     

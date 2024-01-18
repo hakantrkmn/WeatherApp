@@ -85,7 +85,7 @@ struct Day: Codable {
 // MARK: - Hour
 struct Hour: Codable {
     let timeEpoch: Int
-    let time: String
+    let time: Date
     let tempC, tempF: Double
     let isDay: Int
     let condition: Condition
@@ -98,9 +98,9 @@ struct Hour: Codable {
     let feelslikeC, feelslikeF, windchillC, windchillF: Double
     let heatindexC, heatindexF, dewpointC, dewpointF: Double
     let willItRain, chanceOfRain, willItSnow, chanceOfSnow: Int
-    let visKm, visMiles: Int
+    let visKm, visMiles: Double
     let gustMph, gustKph: Double
-    let uv: Int
+    let uv: Double
     let shortRad, diffRad: Double
 
 }

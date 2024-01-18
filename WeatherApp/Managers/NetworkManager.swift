@@ -16,10 +16,17 @@ class NetworkManager
     
     func getWeatherData(for cityName : String,completed : @escaping (Result<Weather,AFError>) -> ())
     {
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm"
+        dateFormatter.locale = Locale(identifier: "en_US_POSIX")
+        dateFormatter.timeZone = .current
         let decoder = JSONDecoder()
         decoder.keyDecodingStrategy = .convertFromSnakeCase
+        decoder.dateDecodingStrategy = .formatted(dateFormatter)
         AF.request(baseUrl + "q=\(cityName)&days=5&key=\(apiKey)").responseDecodable(of: Weather.self ,decoder: decoder) { response in
-            completed(response.result)
+            print(self.baseUrl + "q=\(cityName)&days=5&key=\(self.apiKey)")
+             completed(response.result)
         }
         
         
