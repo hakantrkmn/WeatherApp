@@ -31,13 +31,18 @@ class WADayTVCell: UITableViewCell
     {
     
         dayLabel.text = dayWeather.date.getDateDayName()
-        minDegree.text = String(dayWeather.day.mintempC)
-        maxDegree.text = String(dayWeather.day.maxtempC)
+        iconImage.sd_setImage(with: URL(string: "https:" + dayWeather.day.condition.icon))
+        minDegree.text = "Min : " + String(dayWeather.day.mintempC)
+        maxDegree.text = "Max : " + String(dayWeather.day.maxtempC)
 
     }
     
     func configure()
     {
+        dayLabel.textAlignment = .left
+        minDegree.textAlignment = .center
+        maxDegree.textAlignment = .center
+
         addSubViews(dayLabel,iconImage,minDegree,maxDegree)
         
         dayLabel.snp.makeConstraints { make in

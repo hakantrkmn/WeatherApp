@@ -33,6 +33,7 @@ class WADaysView: UIView
     
     func configure()
     {
+        
         addSubview(tableView)
         tableView.snp.makeConstraints { make in
             make.edges.equalTo(self)

@@ -10,6 +10,9 @@ import UIKit
 class WeatherInfoVC: UIViewController {
     var weatherData : Weather?
     
+    var scrollView = UIScrollView()
+    var contentView = UIView()
+    
     var summaryView = WASummaryView()
     var hoursView = WAHoursView()
     var daysView = WADaysView()
@@ -24,7 +27,7 @@ class WeatherInfoVC: UIViewController {
     
     func getWeatherData()
     {
-        NetworkManager.shared.getWeatherData(for: "trabzon") { result in
+        NetworkManager.shared.getWeatherData(for: "buca izmir") { result in
             switch result
             {
             case .success(let success):
@@ -49,25 +52,42 @@ class WeatherInfoVC: UIViewController {
     func configureView()
     {
         navigationController?.navigationBar.prefersLargeTitles = true
-        view.addSubViews(summaryView,hoursView,daysView)
+        
+        view.addSubview(scrollView)
+        scrollView.addSubview(contentView)
+        contentView.addSubViews(summaryView,hoursView,daysView)
+        
+        scrollView.snp.makeConstraints { make in
+            make.top.leading.trailing.equalTo(view.safeAreaLayoutGuide)
+            make.height.equalTo(view.safeAreaLayoutGuide)
+        }
+        
+        contentView.snp.makeConstraints { make in
+            make.edges.equalTo(scrollView)
+            make.width.equalTo(scrollView.snp.width)
+            make.bottom.equalTo(daysView)
+        }
+        
         
         summaryView.snp.makeConstraints { make in
-            make.top.equalTo(view.safeAreaLayoutGuide).offset(50)
-            make.trailing.leading.equalTo(view).inset(100)
+            make.top.equalTo(contentView)
+            make.trailing.leading.equalTo(contentView).inset(100)
             make.height.equalTo(200)
         }
         
         hoursView.snp.makeConstraints { make in
             make.top.equalTo(summaryView.snp.bottom)
-            make.trailing.leading.equalTo(summaryView)
+            make.trailing.leading.equalTo(contentView).inset(50)
             make.height.equalTo(120)
         }
         
         daysView.snp.makeConstraints { make in
             make.top.equalTo(hoursView.snp.bottom)
-            make.trailing.leading.equalTo(summaryView)
+            make.trailing.leading.equalTo(contentView).inset(50)
             make.height.equalTo(400)
         }
+        
+      
     }
     
     
