@@ -13,8 +13,8 @@ class WADayTVCell: UITableViewCell
     
     let dayLabel = UILabel()
     let iconImage = UIImageView()
-    let minDegree = UILabel()
-    let maxDegree = UILabel()
+    let minDegree = WASummaryLabel()
+    let maxDegree = WASummaryLabel()
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?)
     {
@@ -42,7 +42,7 @@ class WADayTVCell: UITableViewCell
         dayLabel.textAlignment = .left
         minDegree.textAlignment = .center
         maxDegree.textAlignment = .center
-
+        
         addSubViews(dayLabel,iconImage,minDegree,maxDegree)
         
         dayLabel.snp.makeConstraints { make in
@@ -53,10 +53,10 @@ class WADayTVCell: UITableViewCell
         }
         
         iconImage.snp.makeConstraints { make in
-            make.top.equalTo(self)
+            make.centerY.equalTo(self)
             make.leading.equalTo(dayLabel.snp.trailing)
             make.width.equalTo(self).dividedBy(4)
-            make.height.equalTo(self)
+            make.height.equalTo(iconImage.snp.width)
         }
         
         minDegree.snp.makeConstraints { make in

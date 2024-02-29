@@ -7,7 +7,14 @@
 
 import UIKit
 
+
+
 class WeatherInfoVC: UIViewController {
+    
+    
+    
+    var cityName : String?
+    var city : City?
     var weatherData : Weather?
     
     var scrollView = UIScrollView()
@@ -16,24 +23,42 @@ class WeatherInfoVC: UIViewController {
     var summaryView = WASummaryView()
     var hoursView = WAHoursView()
     var daysView = WADaysView()
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
         configureView()
         getWeatherData()
+        let addButton = UIBarButtonItem(barButtonSystemItem: .add , target : self , action : #selector(addButtonTapped) )
+        navigationItem.rightBarButtonItem = addButton
     }
+    @objc func addButtonTapped()
+    {
+        PersistenceManager.updateWith(favorite: city!, actionType: .Add) { result in
+            if result == nil
+            {
+                self.presentAlert(title: "Eklendi", message: "Şehir başarıyla eklendi", buttonTitle: "Tamam")
+                print("başarılı")
+            }
+            else
+            {
+                self.presentAlert(title: "Error", message: result?.rawValue ?? "", buttonTitle: "Tamam")
+                
+            }
+        }
+    }
+
     
-    
+  
     
     func getWeatherData()
     {
-        NetworkManager.shared.getWeatherData(for: "buca izmir") { result in
+        NetworkManager.shared.getWeatherData(for: cityName ?? "istanbul") { result in
             switch result
             {
             case .success(let success):
                 self.weatherData = success
                 self.summaryView.set(with: self.weatherData!)
-                
                 let hour = Calendar.current.component(.hour, from: Date())
                 self.hoursView.hours = success.forecast.forecastday[0].hour
                 self.hoursView.hours.removeFirst(hour)

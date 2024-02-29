@@ -28,6 +28,7 @@ class WASummaryView: UIView {
     
     func set(with weather : Weather)
     {
+        print(weather.location.name)
         cityName.text = weather.location.name
         degree.text = String(Int(weather.current.tempC)) + " Degree"
         condition.text = weather.current.condition.text

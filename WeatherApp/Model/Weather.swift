@@ -72,7 +72,7 @@ struct Day: Codable {
     let maxtempC, maxtempF, mintempC, mintempF: Double
     let avgtempC, avgtempF, maxwindMph, maxwindKph: Double
     let totalprecipMm, totalprecipIn: Double
-    let totalsnowCm: Int
+    let totalsnowCm: Double
     let avgvisKm: Double
     let avgvisMiles, avghumidity, dailyWillItRain, dailyChanceOfRain: Int
     let dailyWillItSnow, dailyChanceOfSnow: Int
@@ -101,7 +101,7 @@ struct Hour: Codable {
     let visKm, visMiles: Double
     let gustMph, gustKph: Double
     let uv: Double
-    let shortRad, diffRad: Double
+    let shortRad, diffRad: Double?
 
 }
 

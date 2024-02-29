@@ -21,7 +21,7 @@ class WATabBarController: UITabBarController {
     func createSearchNC() -> UINavigationController
     {
         let searchVC = SearchVC()
-        searchVC.title = "Hava Durumu"
+        searchVC.title = "Favorites"
         searchVC.tabBarItem = UITabBarItem(tabBarSystemItem: .search, tag: 0)
         return UINavigationController(rootViewController: searchVC)
     }
@@ -29,8 +29,8 @@ class WATabBarController: UITabBarController {
     func createWeatherInfoVC() -> UINavigationController
     {
         let weatherInfo = WeatherInfoVC()
-        weatherInfo.title = "InfoVC"
-        weatherInfo.tabBarItem = UITabBarItem(title: "Info", image: UIImage(systemName: "thermometer.medium"), tag: 1)
+        weatherInfo.title = "Weather"
+        weatherInfo.tabBarItem = UITabBarItem(title: "Weather", image: UIImage(systemName: "thermometer.medium"), tag: 1)
         return UINavigationController(rootViewController: weatherInfo)
     }
 
